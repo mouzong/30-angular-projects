@@ -5,16 +5,31 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-root',
   imports: [FormsModule],
   template: `
-    <div class="profile-card">
-      <h2>Profile Card</h2>
-      <p><strong>Name: </strong>{{ name }}</p>
-      <p><strong>Age: </strong> {{ age }}</p>
-      <p><strong>Description: </strong> {{ description }}</p>
+    <div
+      class="max-w-md mx-auto my-5 p-5 border border-gray-300 rounded-lg bg-gray-50 shadow-md font-sans"
+    >
+      <h2 class="text-center text-2xl mb-4">Profile Card</h2>
+      <p class="text-[15px]"><strong>Name: </strong>{{ name }}</p>
+      <p class="text-[15px]"><strong>Age: </strong> {{ age }}</p>
+      <p class="text-[15px]">
+        <strong>Description: </strong> {{ description }}
+      </p>
 
-      <h3>Update Profile</h3>
-      <input type="text" [(ngModel)]="name" placeholder="Enter your new name" />
-      <input type="number" [(ngModel)]="age" placeholder="Enter your age" />
+      <h3 class="text-left text-xl mt-6 mb-2">Update Profile</h3>
       <input
+        class="w-full p-2 my-1 border border-gray-300 rounded-md text-[13px]"
+        type="text"
+        [(ngModel)]="name"
+        placeholder="Enter your new name"
+      />
+      <input
+        class="w-full p-2 my-1 border border-gray-300 rounded-md text-[13px]"
+        type="number"
+        [(ngModel)]="age"
+        placeholder="Enter your age"
+      />
+      <input
+        class="w-full p-2 my-1 border border-gray-300 rounded-md text-[13px]"
         type="text"
         [(ngModel)]="description"
         placeholder="short description about yourself"
@@ -22,35 +37,17 @@ import { FormsModule } from '@angular/forms';
     </div>
   `,
   styles: `
-  .profile-card {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 15px;
-  }
 
-  p {
-    font-size: 17px;
-  }
+ 
 
-  input {
-    width: 95%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
+  // input {
+  //   width: 95%;
+  //   padding: 10px;
+  //   margin: 5px 0;
+  //   border: 1px solid #ccc;
+  //   border-radius: 5px;
+  //   font-size: 16px;
+  // }
   `,
 })
 export class AppComponent {
